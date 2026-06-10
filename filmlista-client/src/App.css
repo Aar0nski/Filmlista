@@ -1,0 +1,63 @@
+.app {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.movie-form {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+    .movie-form input {
+        padding: 8px;
+    }
+
+    .movie-form button {
+        padding: 8px 12px;
+        cursor: pointer;
+    }
+
+.movie-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.movie-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.delete-button {
+    background-color: #c0392b;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+    .delete-button:hover {
+        background-color: #922b21;
+    }
+
+/* Responsiv design */
+@media (max-width: 768px) {
+    .movie-form {
+        flex-direction: column;
+    }
+
+        .movie-form input,
+        .movie-form button {
+            width: 100%;
+        }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
