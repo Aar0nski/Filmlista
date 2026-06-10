@@ -1,6 +1,7 @@
 ﻿using Filmlista.Api.Data;
 using Filmlista.Api.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Filmlista.Api.Controllers;
 
@@ -38,6 +39,7 @@ public class MoviesController : ControllerBase
 
         return Ok(movie);
     }
+    [Authorize(Roles = "Admin")]
     [HttpDelete("{id}")]
     public IActionResult DeleteMovie(int id)
     {
